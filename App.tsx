@@ -1,16 +1,17 @@
-import React from 'react';
-import { View, Text, StyleSheet, StatusBar } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import Login from './src/modules/auth/view/login';
+import { SafeAreaView, StatusBar, View } from "react-native";
+import Login from "./src/modules/auth/view/login";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import Home from "./src/modules/home/view/home";
+
 
 function App() {
   return (
-    <SafeAreaView>
+    <SafeAreaProvider style={{marginTop:15}}>
       <View >
         <StatusBar barStyle="dark-content" />
-       <Login/>
+     <Home/>
       </View>
-    </SafeAreaView>
+    </SafeAreaProvider>
 
   );
 }
